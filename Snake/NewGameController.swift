@@ -7,24 +7,31 @@
 //
 
 import UIKit
+import SpriteKit
 
 class NewGameController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        addBackGround()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func addBackGround() {
+        let skView = SKView(frame: self.view.frame)
+        self.view.addSubview(skView)
+        let skScene:SKScene = SKScene(size: skView.frame.size)
+        skScene.backgroundColor = .black
+        skScene.scaleMode = .aspectFill
+        let emitter:SKEmitterNode = SKEmitterNode(fileNamed: "SparkParticle")!
+        emitter.position = CGPoint(x: 0, y: 1472)
+        skScene.addChild(emitter)
+        skView.presentScene(skScene)
+        skView.allowsTransparency = true
+        self.view.sendSubviewToBack(skView)
     }
-    */
+    
+    func addUI() {
+        
+    }
 
 }

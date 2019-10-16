@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3E45101D2355CC410046CA66 /* Explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3E45101C2355CC410046CA66 /* Explosion.sks */; };
 		3E45101F2355DB1C0046CA66 /* SparkParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3E45101E2355DB1C0046CA66 /* SparkParticle.sks */; };
+		3E451023235705380046CA66 /* NewGameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E451022235705380046CA66 /* NewGameController.swift */; };
 		3ED4BE712354907A001D7169 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED4BE702354907A001D7169 /* AppDelegate.swift */; };
 		3ED4BE772354907A001D7169 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED4BE762354907A001D7169 /* GameScene.swift */; };
 		3ED4BE792354907A001D7169 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED4BE782354907A001D7169 /* GameViewController.swift */; };
@@ -20,7 +21,8 @@
 /* Begin PBXFileReference section */
 		3E45101C2355CC410046CA66 /* Explosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Explosion.sks; sourceTree = "<group>"; };
 		3E45101E2355DB1C0046CA66 /* SparkParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SparkParticle.sks; sourceTree = "<group>"; };
-		3ED4BE6D2354907A001D7169 /* Snake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snake.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E451022235705380046CA66 /* NewGameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGameController.swift; sourceTree = "<group>"; };
+		3ED4BE6D2354907A001D7169 /* SpaceMission.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceMission.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ED4BE702354907A001D7169 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3ED4BE762354907A001D7169 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		3ED4BE782354907A001D7169 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -52,7 +54,7 @@
 		3ED4BE6E2354907A001D7169 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3ED4BE6D2354907A001D7169 /* Snake.app */,
+				3ED4BE6D2354907A001D7169 /* SpaceMission.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -69,6 +71,7 @@
 				3ED4BE7D2354907D001D7169 /* Assets.xcassets */,
 				3ED4BE7F2354907D001D7169 /* LaunchScreen.storyboard */,
 				3ED4BE822354907D001D7169 /* Info.plist */,
+				3E451022235705380046CA66 /* NewGameController.swift */,
 			);
 			path = Snake;
 			sourceTree = "<group>";
@@ -90,7 +93,7 @@
 			);
 			name = Snake;
 			productName = Snake;
-			productReference = 3ED4BE6D2354907A001D7169 /* Snake.app */;
+			productReference = 3ED4BE6D2354907A001D7169 /* SpaceMission.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -148,6 +151,7 @@
 			files = (
 				3ED4BE772354907A001D7169 /* GameScene.swift in Sources */,
 				3ED4BE792354907A001D7169 /* GameViewController.swift in Sources */,
+				3E451023235705380046CA66 /* NewGameController.swift in Sources */,
 				3ED4BE712354907A001D7169 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,7 +303,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.testing.Snake;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SpaceMission;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -316,7 +320,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.testing.Snake;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SpaceMission;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

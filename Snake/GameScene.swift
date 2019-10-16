@@ -182,22 +182,17 @@ extension GameScene {
         let explosion = SKEmitterNode(fileNamed: "Explosion")!
           explosion.position = planeNode.position
           self.addChild(explosion)
-          
+          showAlert()
           planeNode.removeFromParent()
           enemyNode.removeFromParent()
          self.removeAllActions()
-        let controller = UIAlertController(title: "Game Over", message: "You crashed your ship captain.", preferredStyle: .alert)
-        let action = UIAlertAction(title: "Restart", style: .destructive) { (action) in
-            let nextScene = GameScene(size: self.scene!.size)
-            nextScene.scaleMode = self.scaleMode
-            nextScene.backgroundColor = UIColor.black
-            self.view?.presentScene(nextScene, transition: SKTransition.fade(with: UIColor.black, duration: 1.5))
-        }
-        controller.addAction(action)
-        self.view?.window?.rootViewController?.present(controller,animated: true)
-          self.run(SKAction.wait(forDuration: 2)) {
+          self.run(SKAction.wait(forDuration: 3)) {
               explosion.removeFromParent()
           }
+    }
+    
+    func showAlert() {
+        NotificationCenter.default.post(Notification(name: Notification.Name(rawValue: "NewGame"), object: nil, userInfo: nil))
     }
 }
 

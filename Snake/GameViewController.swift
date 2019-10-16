@@ -15,20 +15,41 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        createGameScene()
+        NotificationCenter.default.addObserver(self, selector: #selector(ShowAlert), name: Notification.Name(rawValue: "NewGame"), object: nil)
+    }
+    
+    func createGameScene() {
         if let view = self.view as! SKView? {
-            // Load the SKScene from 'GameScene.sks'
+            
             let scene = GameScene(size: view.bounds.size)
-                // Set the scale mode to scale to fit the window
+                
             scene.scaleMode = .aspectFill
             scene.backgroundColor = .black
-                // Present the scene
+
             view.presentScene(scene)
-            
             
             view.ignoresSiblingOrder = true
             
             view.showsFPS = true
             view.showsNodeCount = true
         }
+    }
+    
+    @objc func ShowAlert() {
+        let controller = UIAlertController(title: "Game Over", message: "You crashed your ship captain.", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Restart", style: .destructive) { (action) in
+            self.createGameScene()
+        }
+        let endAction = UIAlertAction(title: "End Game", style: .cancel) { (action) in
+            self.backToParentController()
+        }
+        controller.addAction(action)
+        controller.addAction(endAction)
+        self.present(controller, animated: true, completion: nil)
+    }
+    
+    func backToParentController() {
+        self.dismiss(animated: true, completion: nil)
     }
 }
