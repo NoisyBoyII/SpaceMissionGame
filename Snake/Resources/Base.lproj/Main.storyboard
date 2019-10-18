@@ -49,7 +49,6 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Duk-TT-1NP" firstAttribute="centerY" secondItem="xbt-sd-Sn4" secondAttribute="centerY" id="C0c-QP-v8W"/>
                             <constraint firstItem="Duk-TT-1NP" firstAttribute="centerX" secondItem="xbt-sd-Sn4" secondAttribute="centerX" id="JdG-mz-Ddy"/>
@@ -64,7 +63,7 @@
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="Snake" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="SpaceMission" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -16,7 +16,7 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         
         createGameScene()
-        NotificationCenter.default.addObserver(self, selector: #selector(ShowAlert), name: Notification.Name(rawValue: "NewGame"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ShowAlert), name: newGameName, object: nil)
     }
     
     func createGameScene() {
